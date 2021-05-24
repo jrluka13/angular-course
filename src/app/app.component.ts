@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LogNameService} from "./log-name.service";
 
 export interface Post{
   title:string,
@@ -16,10 +17,13 @@ export class AppComponent implements OnInit {
 
   posts: Post[] = [
     {title:'Хочу выучить Angular компоненты',text:'Я все ещё учу компоненты',id:1},
-    {title:'След блок',text:'Будет проаовйцвйцвйцвйцв',id:2},
-    // {title:'AWDawdjoijoirfejoewf',text:'AWDjhklewfkwefwefwe',id:3}
+    {title:'След блок',text:'Будет проаовйцвйцвйцвйцв',id:2}
 
   ]
+
+  constructor(serv:LogNameService) {
+    serv.logText("Hello everyone")
+  }
 
   ngOnInit():void
 {

@@ -8,7 +8,15 @@ import { Post } from '../app.component';
   changeDetection:ChangeDetectionStrategy.OnPush,
   encapsulation:ViewEncapsulation.None
 })
-export class PostComponent implements OnInit, OnChanges, DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy {
+export class PostComponent implements OnInit
+  // OnChanges,
+  // DoCheck,
+  // AfterContentInit,
+  // AfterContentChecked,
+  // AfterViewInit,
+  // AfterViewChecked,
+  // OnDestroy
+{
 
   @ContentChild('info',{static:true}) infoRef!: ElementRef
   @Output() onRemove = new EventEmitter<number>()
@@ -20,10 +28,10 @@ export class PostComponent implements OnInit, OnChanges, DoCheck,AfterContentIni
   }
 
 
-  ngOnChanges(changes:SimpleChanges):void{
-    console.log('ngOnChanges: ', changes);
-
-  }
+  // ngOnChanges(changes:SimpleChanges):void{
+  //   console.log('ngOnChanges: ', changes);
+  //
+  // }
 
   ngOnInit(): void {
     console.log('ngOnInit');
@@ -32,31 +40,31 @@ export class PostComponent implements OnInit, OnChanges, DoCheck,AfterContentIni
     // console.log(this.infoRef.nativeElement);
 
   }
-
-  ngDoCheck():void{
-    console.log('ngDoCheck');
-
-  }
-  ngAfterContentInit():void{
-    console.log('ngAfterContentInit');
-
-  }
-  ngAfterContentChecked():void{
-    console.log('ngAfterContentChecked');
-
-  }
-
-  ngAfterViewInit():void{
-    console.log('ngAfterViewInit');
-
-  }
-  ngAfterViewChecked():void{
-    console.log('ngAfterViewChecked');
-
-  }
-  ngOnDestroy():void{
-    console.log('ngOnDestroy');
-
-  }
+  //
+  // ngDoCheck():void{
+  //   console.log('ngDoCheck');
+  //
+  // }
+  // ngAfterContentInit():void{
+  //   console.log('ngAfterContentInit');
+  //
+  // }
+  // ngAfterContentChecked():void{
+  //   console.log('ngAfterContentChecked');
+  //
+  // }
+  //
+  // ngAfterViewInit():void{
+  //   console.log('ngAfterViewInit');
+  //
+  // }
+  // ngAfterViewChecked():void{
+  //   console.log('ngAfterViewChecked');
+  //
+  // }
+  // ngOnDestroy():void{
+  //   console.log('ngOnDestroy');
+  //
+  // }
 
 }
